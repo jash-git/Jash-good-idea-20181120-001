@@ -1,0 +1,225 @@
+@charset "utf-8";
+/*外掛的css*/
+@import url("jquery/waterfall/default.css");
+@import url("jquery/waterfall/component.css");
+/*自創*/
+
+@import url("common.css");
+@import url("index.css");
+@import url("waterfall.css");
+@import url("article.css");
+@import url("article_sort.css");
+@import url("aside.css");
+@import url("member.css");
+
+/*Footable*/
+@import url("jquery/footable/footable.core.min.css");
+/*@import url("jquery/footable/footable.metro.min.css");*/
+/*Tag-input*/
+@import url("jquery/tagsinput/bootstrap-tagsinput.css");
+/*表格樣式
+@import url("jquery/bootstrap-facebook.css");*/
+/*slider*/
+@import url("../js/slider/assets/owl.carousel.css");
+@import url("../js/slider/assets/owl.theme.default.min.css");
+
+
+/* 簡單流變媒體
+   注意: 流變媒體要求您必須移除 HTML 中媒體的高度和寬度屬性
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 不支援最大寬度，因此寬度預設為 100% */
+.ie6 img {
+	width:100%;
+}
+
+body{ background:#f5f5f5;}
+/*文字靠左靠右*/
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+/*外框邊邊*/
+.border-inner{ border-radius: 3px; overflow: hidden; position:relative; background: #fff; border: 1px solid #d3d6db; margin-bottom: 15px;}
+/*表格紅字*/
+p.fail{ font-size: 12px; margin:5px 0; color: #D54747;}
+/*框線*/
+.border-none{ border: none !important;}
+.border-radius-none{border-radius: 0 !important;}
+/*廣告*/
+div.ad_728{width:auto;} div.ad_970{width:auto;} div.ad_300 {width: auto;} div.ad_320{width: auto;} 
+/*廣告內頁*/
+.banner_wrapper_bottom {margin-bottom: 20px; text-align:center;}
+.banner_wrapper_top {margin-top: 20px; text-align:center;}
+/*置中*/
+.center-block {display: block;margin-left: auto;margin-right: auto;}
+/*無陰影*/
+.noshadow{-webkit-box-shadow:none !important;-moz-box-shadow:none !important;box-shadow:none !important;}
+.nobg{background: none !important;}
+.noborder{ border: none !important;}
+/*ul ol li設定*/
+.linelist {list-style: none; margin: 0; padding: 0;}
+.linelist li {margin: 0;padding: 0; word-spacing: normal; letter-spacing: normal;display: inline-block;}
+/*Form Style*/
+.form-control {font-size: 15px;}
+/*Form Style For Apple*/
+select.form-control, input.form-control {line-height: 27px;}
+/*font color*/
+.green{ color:#139A23  !important;}
+.red{ color:#f11818 !important;}
+.error{ margin-top:5px; display: block; color:#E23C12 !important; }
+.blue {color: #039 !important;}
+.orange{ color:#ff7a31 !important;}
+.maintenance {color: #D54747; font-size: 18px;  font-weight: 700;  margin: 15px 0;  text-align: center;}
+/*按鈕*/
+/*按鈕*/
+ .common-btn {
+    -webkit-appearance: none;
+    width: 150px;
+    background: #354b7a;
+    font-size: 13px;
+    line-height: normal;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 11px 0;
+    box-shadow: none;
+    float: none;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    color: #fff;
+    border: 0;-webkit-appearance: none;
+    max-width: 250px;
+    margin: 0;
+    display: block;}
+.common-btn:hover{background: #337ab7;}	
+ @media only screen and (max-width: 480px) {
+.common-btn {margin: 20px auto 0px auto;}	 
+ }
+ 
+.black-btn {  background: #222; color: #fff;}
+.black-btn:hover{background: #5D5D5D}	
+.blue-btn {  background: #337ab7; color: #fff;}
+.blue-btn:hover{ background: #18558A;}
+
+/* Page 頁碼
+------------------------------------------------*/
+/* more pagination */
+.pagination {width:100%;background-color:none;display: block;}
+
+.category .pagination {	margin: 0;}
+.pagination h3{display:block; *text-align:right; font-family: "微軟正黑體", "Arial Unicode MS"; font-size: 15px; letter-spacing: 1px; color: #fff; margin-bottom: 0;
+padding: 10px 10px 20px 0px; text-transform: uppercase;}
+.pagination .nav-previous, .pagination .nav-next {display:inline-block;width:11px;height:12px;margin:0 5px;text-indent:-99999px;}
+.pagination a {display:block;}
+/*content nol pager*/
+.pagenavi {clear: both; padding-top: 20px; padding-bottom: 20px !important; text-align: center; font-size: 108%; font-weight: 700;
+font-family: 'Lato', sans-serif; -webkit-font-smoothing: antialiased; zoom: 1;}
+.pagenavi:before {display: block; content: "";}
+.pagenavi:after {display: block; clear: both; visibility: hidden; height: 0.1px; font-size: 0.1em; line-height: 0; content: "";}
+.pagenavi span { width: 34px; height: 34px; vertical-align: top; line-height: 34px; font-weight: 700; display: inline-block;}
+.pagenavi a { display: inline-block; width: 34px; height: 34px; line-height: 34px; color: #fff; background-color: #A0A0A0; margin: 0 5px;
+overflow: hidden; -webkit-transition: 0.3s ease; -moz-transition: 0.3s ease; -o-transition: 0.3s ease; transition: 0.3s ease;}
+.pagenavi a:hover { background: #fff; color: #000;text-decoration: none;}
+
+.pagenavi .current{ background:#fff;}
+.pagenavi .next-link:before{ content:">>";}
+.pagenavi .previous-link:before{ content:"<<";}
+.pagenavi .disabled:before{ content:"...";}
+@media only screen and (max-width: 600px){
+	.pagination{ margin-bottom: 0;}
+	.pagenavi a {margin: 0;}
+	}
+
+/* Page 頁碼結束---------------------------------------*/
+/*bootstrap fixed
+----------------------------------------------*/
+.shadow, #main-col .inner, .wrapper-col .inner ,#second-col .inner{border: 1px solid #dfddda;background: #fff;}
+@media only screen and (max-width: 480px) {#main-col .inner{ border-right:none; border-left:none;}}
+/*col-3 首頁3欄設定
+------------------------------------------
+@media (min-width: 768px){.container {width: 98%;}}
+@media (min-width: 992px){.container {width: 970px;}}
+@media (min-width:1200px){.container{width:1190px}}
+
+@media (min-width:1500px){.container{width:1400px}}
+@media (min-width:1800px){.container{width:1510px}}
+
+@media (min-width: 992px){
+#main-col.col-md-8{width: 64%;}
+#second-col.col-md-4{  width: 36%;}
+#aside.col-md-12 { width: 100%;}
+}
+@media (min-width: 1200px){
+#main-col.col-lg-6{width: 40.1%;}
+#second-col.col-lg-3{  width: 30.9%;}
+#aside.col-lg-3 { width: 29%;}
+}
+@media (min-width: 1500px){
+#main-col.col-lg-6{width: 50.1%;}
+#second-col.col-lg-3{  width: 25%;}
+#aside.col-lg-3 { width: 24.9%;}
+}
+@media (min-width: 1800px){
+#main-col.col-lg-6{width: 52%;}
+#second-col.col-lg-3{  width: 25%;}
+#aside.col-lg-3 { width: 23%;}
+.visible-lg .banner_wrapper_bottom.col-lg-8 {width: 65%;}
+.visible-lg .banner_wrapper_bottom.col-lg-4 {width: 35%;}
+}*/
+/*col-2 首頁2欄設定
+------------------------------------------*/
+@media (min-width:1200px){.container{width:1140px}}
+@media (min-width:1500px){.container{width:1290px}}
+@media (min-width: 992px){
+#aside.col-md-4 {width: 35%;}
+#main-col.col-md-8 {width: 65%;}}
+@media (min-width: 1200px){
+#main-col.col-lg-9{width: 73.2%;}
+#aside.col-lg-3 {width: 26.8%;}
+}
+
+/*共用 container 設訂*/
+@media only screen and (max-width: 680px) {.container{ padding-right: 5px; padding-left: 5px;}}
+@media only screen and (max-width: 480px) {.container{ padding-right: 0px; padding-left: 0px;}}
+
+/*article*/
+#main-col.col-xs-1, #main-col.col-sm-1, #main-col.col-md-1, #main-col.col-lg-1, #main-col.col-xs-2, #main-col.col-sm-2, #main-col.col-md-2, #main-col.col-lg-2, #main-col.col-xs-3, #main-col.col-sm-3, #main-col.col-md-3, #main-col.col-lg-3, #main-col.col-xs-4, #main-col.col-sm-4, #main-col.col-md-4, #main-col.col-lg-4, #main-col.col-xs-5, #main-col.col-sm-5, #main-col.col-md-5, #main-col.col-lg-5, #main-col.col-xs-6, #main-col.col-sm-6, #main-col.col-md-6, #main-col.col-lg-6, #main-col.col-xs-7, #main-col.col-sm-7, #main-col.col-md-7, #main-col.col-lg-7, #main-col.col-xs-8, #main-col.col-sm-8, #main-col.col-md-8, #main-col.col-lg-8, #main-col.col-xs-9, #main-col.col-sm-9, #main-col.col-md-9, #main-col.col-lg-9, #main-col.col-xs-10, #main-col.col-sm-10, #main-col.col-md-10, #main-col.col-lg-10, #main-col.col-xs-11, #main-col.col-sm-11, #main-col.col-md-11, #main-col.col-lg-11, #main-col.col-xs-12, #main-col.col-sm-12, #main-col.col-md-12, #main-col.col-lg-12, #second-col.col-xs-1, #second-col.col-sm-1, #second-col.col-md-1, #second-col.col-lg-1, #second-col.col-xs-2, #second-col.col-sm-2, #second-col.col-md-2, #second-col.col-lg-2, #second-col.col-xs-3, #second-col.col-sm-3, #second-col.col-md-3, #second-col.col-lg-3, #second-col.col-xs-4, #second-col.col-sm-4, #second-col.col-md-4, #second-col.col-lg-4, #second-col.col-xs-5, #second-col.col-sm-5, #second-col.col-md-5, #second-col.col-lg-5, #second-col.col-xs-6, #second-col.col-sm-6, #second-col.col-md-6, #second-col.col-lg-6, #second-col.col-xs-7, #second-col.col-sm-7, #second-col.col-md-7, #second-col.col-lg-7, #second-col.col-xs-8, #second-col.col-sm-8, #second-col.col-md-8, #second-col.col-lg-8, #second-col.col-xs-9, #second-col.col-sm-9, #second-col.col-md-9, #second-col.col-lg-9, #second-col.col-xs-10, #second-col.col-sm-10, #second-col.col-md-10, #second-col.col-lg-10, #second-col.col-xs-11, #second-col.col-sm-11, #second-col.col-md-11, #second-col.col-lg-11, #second-col.col-xs-12, #second-col.col-sm-12, #second-col.col-md-12, #second-col.col-lg-12 {
+position: relative;min-height: 1px;padding-right: 0px;padding-left: 0px;}
+
+/*member*/
+.wrapper-col.col-xs-1, .wrapper-col.col-sm-1, .wrapper-col.col-md-1, .wrapper-col.col-lg-1, .wrapper-col.col-xs-2, .wrapper-col.col-sm-2, .wrapper-col.col-md-2, .wrapper-col.col-lg-2, .wrapper-col.col-xs-3, .wrapper-col.col-sm-3, .wrapper-col.col-md-3, .wrapper-col.col-lg-3, .wrapper-col.col-xs-4, .wrapper-col.col-sm-4, .wrapper-col.col-md-4, .wrapper-col.col-lg-4, .wrapper-col.col-xs-5, .wrapper-col.col-sm-5, .wrapper-col.col-md-5, .wrapper-col.col-lg-5, .wrapper-col.col-xs-6, .wrapper-col.col-sm-6, .wrapper-col.col-md-6, .wrapper-col.col-lg-6, .wrapper-col.col-xs-7, .wrapper-col.col-sm-7, .wrapper-col.col-md-7, .wrapper-col.col-lg-7, .wrapper-col.col-xs-8, .wrapper-col.col-sm-8, .wrapper-col.col-md-8, .wrapper-col.col-lg-8, .wrapper-col.col-xs-9, .wrapper-col.col-sm-9, .wrapper-col.col-md-9, .wrapper-col.col-lg-9, .wrapper-col.col-xs-10, .wrapper-col.col-sm-10, .wrapper-col.col-md-10, .wrapper-col.col-lg-10, .wrapper-col.col-xs-11, .wrapper-col.col-sm-11, .wrapper-col.col-md-11, .wrapper-col.col-lg-11, .wrapper-col.col-xs-12, .wrapper-col.col-sm-12, .wrapper-col.col-md-12, .wrapper-col.col-lg-12{
+position: relative;min-height: 1px;padding-right: 0px;padding-left: 0px;}
+
+/*main-col, second-col color*/
+#main-col, #second-col{ margin-bottom: 25px;}
+@media only screen and (max-width: 992px){
+#main-col, #second-col{ margin-bottom: 15px;}
+}
+#main-col .inner, #second-col .inner{ background:#fff;}
+#main-col .inner{margin-right: 12px;}
+#memberPage #main-col .inner{margin-right: 0px;}
+#articlePage #main-col .inner{margin-right: 15px;}
+@media only screen and (max-width: 991px){#main-col .inner, #articlePage #main-col .inner {margin-right: 0px;}} 
+/*Start 內頁 setting*/
+secion#main-col{  display:block;}
+secion#second-col{display:block;}
+
+
+/*圖片滑動*/
+a img, img {
+     -webkit-transition: 0.3s ease-in-out;
+     -moz-transition: 0.3s ease-in-out;
+     -o-transition: 0.3s ease-in-out;
+     transition: 0.3s ease-in-out;
+   background:rgba(255,255,255,.05);
+}
+a:hover img, .item:hover figure.photo img {
+  opacity:0.7;
+}
+.over a:hover img {
+  opacity:1;
+}

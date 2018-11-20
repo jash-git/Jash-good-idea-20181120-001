@@ -1,0 +1,553 @@
+@charset "utf-8";
+/* CSS Document */
+/*slider hot
+-----------------------------------------*/
+.main-hot-article-lists {margin: 25px 5px; padding:0; list-style: none;}
+.main-hot-article-lists li{ width: 50%; display:block; float: left; position: relative;}
+.main-hot-article-lists li .item-bg { position: absolute; bottom: 0px; left: 0px; display: block;
+ background: transparent url("../images/common/visual_item_bg.png") repeat-x scroll 0px bottom; width: 100%; min-height: 100%;}
+.main-hot-article-lists li .content{width: 100%;  position: absolute;  bottom: 0; padding: 20px 3%; font-size: 16px;}
+.main-hot-article-lists li .content .title, .main-hot-article-lists li .content .title a{ font-size: 20px; line-height: 1.5; font-family: "Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",sans-serif;  font-weight: 700; color:#fff; letter-spacing: 1px;
+ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 90%;}
+ol.tags .date{ font-size: 100%; margin: 0 0 4px 0; color: #fff; font-family: Arial, Helvetica, sans-serif; font-weight: normal;}
+/*clip*/
+@media only screen and (min-width: 1024px){
+.main-hot-article-lists .clip {  right: 15px; top: auto; bottom: 15px; width: 52px; height: 52px;border-radius: 26px; padding: 25px 0px 0px 0px;
+ font-size: 128.571%;}
+.main-hot-article-lists .clip:hover { right: 11px; bottom: 11px;  width: 60px; height: 60px; border-radius: 30px; padding: 28px 0px 0px 0px;}
+}
+@media only screen and (max-width: 600px){
+.main-hot-article-lists {margin: 10px 5px 0;}
+.main-hot-article-lists li{ width: 100%; display: block; float: none;}
+.main-hot-article-lists li:last-child{ display: none;}
+.main-hot-article-lists .tags li:last-child{ display: inline-block;}
+ol.tags .date{ font-size: 95%}
+.main-hot-article-lists li .content{padding: 10px 2%;}
+.main-hot-article-lists .clip, .main-hot-article-lists .clip:hover{ top: 10px; width: 42px; height: 42px;
+    background: #ffffff url(../images/common/share.png) no-repeat center 5px;
+    border-radius: 21px;
+    text-align: center;
+    font-family: helvetica, arial;
+    color: #ffa133;
+    font-weight: normal;
+    padding: 22px 0 0;
+    line-height: 1em;
+    display: block;
+    border: 1px solid #bfbfbf;
+    overflow: hidden;}	
+.main-hot-article-lists li .content .title, .main-hot-article-lists li .content .title a{ font-size:18px; line-height: 1.5;  width: 100%; font-weight: normal; max-height: 49px; white-space: inherit; }
+
+}
+
+/*熱門標籤*/
+.title a .hot {
+  display: inline-block;
+  background: #ff2818;
+  border-radius: 3px;
+  line-height: 1.0;
+  padding: 3px 5px 4px 5px;
+  margin-right: 10px;
+  color:#fff;
+  font-weight: normal;}
+.title a .hot:after{ content:"HOT";}  
+.title a:hover .hot {color: #fff; text-decoration: none;}
+@media only screen and (max-width: 600px){
+.item .title a .hot { border-radius: 2px; line-height: 1.0; padding: 3px 5px 2px 5px;margin-right: 5px; font-size: 17px}	
+}
+
+/*Index
+-----------------------------------------*/
+
+/*大標*/
+.inner {margin-top: 20px;}
+/*common*/
+.arrow-title {
+	position: relative;
+	background: #b0aba5;
+	border-radius: 6px;
+	padding: 8px 15px;
+	width: 97%;
+	margin: 0 auto 10px;
+	top: -15px;
+	color:#fff;
+	display: block;
+	text-align:left;
+}
+.arrow-title:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(176, 171, 165, 0);
+	border-top-color: #b0aba5;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow-title h2 {
+	padding: 0px;
+	margin: 0px;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif;
+	font-size: 24px;
+
+}
+.arrow-title i{
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 5px
+}
+/*common end*/
+/*顏色+icon*/
+.arrow-title:before{ display: table-cell; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; padding-right: 5px; font-size: 28px}
+#MainNewArticle .arrow-title{background: #b0aba5;}
+#MainNewArticle .arrow-title:before{content:"\f0eb";}
+#MainNewArticle .arrow-title i{ color:#fffc41;}
+
+/*大標 結束*/
+
+/*最新文章
+----------------------------*/
+#MainNewArticle.inner{ margin-bottom: 20px;}
+/*-列表*/
+ul.new-article-lists{margin: 0; padding: 0; list-style: none; position: relative; top: -12px;}
+ul.new-article-lists li{ width: 33.33333333%; float: left; display: block; }
+
+@media only screen and (max-width: 1199px) and (min-width: 990px){
+ul.new-article-lists li{ width: 50%; }
+}
+@media only screen and (max-width: 768px){
+ul.new-article-lists li{ width: 33.33333333%; }
+}
+@media only screen and (max-width: 680px){
+ul.new-article-lists li{ width: 50%; }
+}
+@media only screen and (max-width: 600px){
+/*隱藏最新文章*/
+.hidden-mobile{ display: none!important}
+/*最新文章大標隱藏*/	
+#MainNewArticle .arrow-title{ display: none;}
+ul.new-article-lists{top: 0;}
+ul.new-article-lists li{ width: 100%; float: none;}
+}
+
+
+/*-------------common item box----------*/
+ul li .item{ display: block; margin: 4%; background-color:#eee; position:relative;}
+.item .clearfix{padding: 10px; overflow: hidden;}
+/*圖片*/
+.item .photo img{ width: 100%}
+/*標題*/
+.item .title{ font-size: 16px; height: 52px;  margin: 0 0 10px;
+line-height: 1.5; font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif; font-weight: 700;
+color: #333; text-overflow: ellipsis; overflow: hidden;}
+/*最新標籤*/
+.item .title a .new {
+  display: none;
+  background: #ff7588;
+  border-radius: 3px;
+  line-height: 1.0;
+  padding: 3px 5px 4px 5px;
+  margin-right: 10px;
+  color:#fff;}
+.item .title a .new:after{ content:"NEW";}  
+.item .title a:hover .new {color: #fff; text-decoration: none;}
+@media only screen and (max-width: 600px){
+.item .title a .new {display: inline-block; border-radius: 2px; line-height: 1.0; padding: 3px 5px 2px 5px;margin-right: 5px; font-size: 17px}	
+}
+/*標籤*/
+.tags, .item .tags, .item ul.posted{margin: 0; padding: 0; list-style: none; display:block;}
+.item .tags{overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+.tags li, .item .tags li {
+	width: auto;
+	float: none;
+    display: inline-block;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    white-space: nowrap;}	
+.tags li a, .item .tags li a {
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 3px;
+    display: block;
+    padding: 0 4px;
+    line-height: 18px;}
+/*列表頁，標籤只顯示前面3個，其餘隱藏*/
+.item .tags li{ display:none;}
+.item .tags li:nth-child(1), .item .tags li:nth-child(2), .item .tags li:nth-child(3){ display: inline-block;}
+/*留言數量*/
+.item .comments{	
+    line-height: 1.3;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	margin-left: 5px;
+	}
+.item .comments span:before{
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	content: "\f075";
+	margin-right: 5px;
+	}
+.item .comments a{color: #A2A2A2;}
+.item .comments a:hover{color:#309ac1}
+.item a.comments-no-comment{color: #eee;}	
+/*標籤顏色*/
+.tags li.all a, .tags li.fate a, .tags li.love a, .tags li.work a, .tags li.personality a, .tags li.puzzle a, .tags li.issue a, .tags li.poll a, .tags li.friendship a, 
+.tags li.Capricorn a, .tags li.Aries a, .tags li.Taurus a, .tags li.Gemini a, .tags li.Cancer a, .tags li.Leo a, .tags li.Virgo a, .tags li.Libra a, .tags li.Scorpio a, .tags li.Sagittarius a, .tags li.Aquarius a, .tags li.Pisces a{ color:#fff !important;}
+/*-基本*/
+.tags li.all a, .tags.color-or li.all a, .tags.color-or li.color01 a{background: #5d5e5e; border-color:#5d5e5e;}
+.tags li.fate a, .tags.color-or li.fate a, .tags.color-or li.color02 a{ background: #74bc48; border-color:#74bc48;}
+.tags li.love a, .tags.color-or li.love a, .tags.color-or li.color03 a{ background: #eb6f70; border-color:#eb6f70;}
+.tags li.work a, .tags.color-or li.work a, .tags.color-or li.color04 a{ background: #40a880; border-color:#40a880;}
+.tags li.personality a, .tags.color-or li.personality a, .tags.color-or li.color05 a{background: #eb9e79; border-color:#eb9e79;}
+.tags li.puzzle a, .tags.color-or li.puzzle a, .tags.color-or li.color06 a{background: #955694; border-color:#955694;}
+.tags li.issue a, .tags.color-or li.issue a, .tags.color-or li.color07 a{background: #309ac1; border-color:#309ac1;}
+.tags li.poll a, .tags.color-or li.poll a, .tags.color-or li.color08 a{background: #ff8400; border-color:#ff8400;}	
+.tags li.friendship a, .tags.color-or li.friendship a, .tags.color-or li.color09 a{background: #ECBF0A; border-color:#ECBF0A;}	
+/*-星座*/
+.tags li.Capricorn a, .tags li.Capricorn a{ border-color:#5d5e5e; background:#5d5e5e;}
+.tags li.Aries a, .tags.color-or li.Aries a{ border-color:#eb6f70; background:#eb6f70;}
+.tags li.Taurus a, .tags.color-or li.Taurus a{ border-color:#74bc48; background:#74bc48;}
+.tags li.Gemini a, .tags.color-or li.Gemini a{ border-color:#40a880; background:#40a880;}
+.tags li.Cancer a, .tags.color-or li.Cancer a{ border-color:#eb611e; background:#eb611e;}
+.tags li.Leo a, .tags.color-or li.Leo a{ border-color:#d93a49; background:#d93a49;}
+.tags li.Virgo a, .tags.color-or li.Virgo a{ border-color:#955694; background:#955694;}
+.tags li.Libra a, .tags.color-or li.Libra a{ border-color:#3b5c7d; background:#3b5c7d;}
+.tags li.Scorpio a, .tags.color-or li.Scorpio a{ border-color:#ffb43f; background:#ffb43f;}
+.tags li.Sagittarius a, .tags.color-or li.Sagittarius a{border-color:#fdc13f; background:#fdc13f;}
+.tags li.Aquarius a, .tags.color-or li.Aquarius a {border-color:#30c185; background:#30c185;}
+.tags li.Pisces a, .tags.color-or li.Pisces a{border-color:#309ac1; background:#309ac1;} 
+/*關鍵字+slider 顏色背景文字白*/
+.tags.color-or li.all a, .tags.color-or li.fate a, .tags.color-or li.love a, .tags.color-or li.work a, .tags.color-or li.personality a, .tags.color-or li.puzzle a, .tags.color-or li.issue a, .tags.color-or li.poll a, .tags.color-or li.friendship a, .tags.color-or li.color01 a, .tags.color-or li.color02 a, .tags.color-or li.color03 a, .tags.color-or li.color04 a, .tags.color-or li.color05 a, .tags.color-or li.color06 a, .tags.color-or li.color07 a, .tags.color-or li.color08 a, .tags.color-or li.Capricorn a, .tags.color-or li.Aries a, .tags.color-or li.Taurus a, .tags.color-or li.Gemini a, .tags.color-or li.Cancer a, .tags.color-or li.Leo a, .tags.color-or li.Virgo a, .tags.color-or li.Libra a, .tags.color-or li.Scorpio a, .tags.color-or li.Sagittarius a, .tags.color-or li.Aquarius a , .tags.color-or li.Pisces a{ color:#fff !important;}
+
+
+
+/*日期+作者*/
+.item ul.posted{ margin-top: 10px;}
+.item ul.posted li{width: auto; float: none; display: inline-block;}
+.item ul.posted li.date, .item ul.posted li.author{ font-size: 12px; color:#646464}
+.item ul.posted li.author{ font-weight: bold;}
+.item ul.posted li.author span{ font-weight: normal;}
+
+/*分享*/
+.clip {
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+  width: 42px;
+  height: 42px;
+  background: #ffffff url(../images/common/share.png) no-repeat center 5px;
+  border-radius: 21px;
+  text-align: center;
+  font-family: helvetica, arial;
+  color: #ffa133;
+  font-weight: normal;
+  padding: 22px 0 0;
+  line-height: 1em;
+  display: block;
+  border: 1px solid #bfbfbf;
+  overflow: hidden;
+}
+.clip:visited {
+  color: #ffa133;
+}
+.clip.cliped {
+  background: #ffa133 url(../images/common/share2.png) no-repeat center 5px;
+  color: #fff;
+}
+.clip:hover {
+  text-decoration: none;
+  background-position: center 8px;
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 25px 0 0;
+  right: 10px;
+  bottom: 9px;
+}
+/*更多按鈕*/
+/*lg-btn*/
+.more-lg-btn, .share-lg-btn {
+  display: table;
+  margin: 0 auto 15px;
+  text-align: center;
+  min-width: 302px;
+  max-width: 302px;
+  height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 171.42857142857142% !important;
+  line-height: 50px;
+  background-color: #ffa133;
+  text-align: center;
+  cursor: pointer;
+}
+.more-lg-btn:before, .share-lg-btn:before {
+display: table-cell; vertical-align:middle;
+font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; padding-right: 5px; font-size: 28px; content: "\f054"; text-indent: 25px;}
+.more-lg-btn:after, .share-lg-btn:after{ content:attr(btn-text); display: table-cell; vertical-align:middle; text-indent: -60px;
+ font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif;}
+.more-lg-btn:hover, .share-lg-btn:hover {
+  background-color: #ffbb66;
+  color: #fff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 400px){
+.more-lg-btn, .more-lg-btn:hover { background-color: #e7e7e7; color: #999; min-width: 100%;
+  max-width: 100%;}	
+}
+/*sm-btn*/
+.more-sm-btn{ min-width:133px; max-width: 133px; background: #c74344; display:block; margin: 0 auto 10px; color:#fff;
+border-radius: 5px; text-align: center; padding: 5px; cursor: pointer;}
+.more-sm-btn a{color:#fff; text-decoration: none;}
+.more-sm-btn:before{ content: attr(btn-text); font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif; font-size: 16px; font-weight: 700;}
+.more-sm-btn:hover{ background: #FF5E5F;}
+
+@media only screen and (max-width: 600px){
+ul li .item{ margin: 3% 2%; background-color:#fff; border-bottom: 1px dotted #bfbfbf;}
+.item .clearfix { padding: 0px 5px 10px 5px;}
+.item .title {margin-bottom:5px; height: auto; font-size:18px; font-weight: normal;}
+.item .title a{color:#252525;}
+.item .photo{ width: 140px; margin-top: 3px; float: left;  overflow: hidden; clear: both;  margin-right: 5px; margin-bottom: 20px;}
+.item .tags li{ font-size: 12px;}
+/*take out標籤顏色*/
+.tags li a, .item .tags li a, .item ul.posted li.date, .item ul.posted li.author{color:#888}
+.tags li.all a, .tags li.fate a, .tags li.love a, .tags li.work a, .tags li.personality a, .tags li.puzzle a, .tags li.issue a, .tags li.poll a, .tags li.friendship a{ color:#888 !important; background:#fff; border-color:#fff;}
+.item ul.posted { margin-top: 5px;}
+
+}
+
+@media only screen and (max-width: 480px){	
+.item .photo{ width: 120px;}
+.item .tags li, .item ul.posted li.date, .item ul.posted li.author{ font-size: 11px;}
+.tags li a, .item .tags li a{ line-height: 15px;}
+.item ul.posted { margin-top: 0;}
+/*列表頁，標籤只顯示前面3個，其餘隱藏*/
+.item .tags li{ display:none;/*解決Chrome中最小字級12px的問題*/ -webkit-text-size-adjust: none; font-size: 11px;}
+.item .tags li:nth-child(1), .item .tags li:nth-child(2){ display: inline-block;}
+/*分享*/
+.clip { right: 8px; bottom: 12px; width: 33px;  height: 33px;
+ background: #ffffff url(../images/common/share.png) no-repeat center 4px;
+border-radius: 21px; color: #ffa133; font-weight: normal; padding: 14px 0 0;
+line-height: 1em; display: block; border: 1px solid #bfbfbf;  background-size: 10px; 
+/*解決Chrome中最小字級12px的問題*/
+-webkit-text-size-adjust: none;
+font-size: 11px; font-weight: bold; letter-spacing: -1.7px;}
+.clip:hover { background-position: center 4px; border-radius: 21px; width: 33px;
+height: 33px; padding: 14px 0 0; right: 8px; bottom: 12px;}
+}
+@media only screen and (max-width: 321px){	
+.item .photo{ width: 110px;}
+}
+
+/*-------------common item box end----------*/
+
+
+/*首頁分類區塊
+--------------------------------------------------------*/
+#SortArticles{ margin: 30px 0 20px;}
+#SortArticles .inner{ width: 48%; float:left;}
+#main-col #SortArticles .inner { margin-right: 0;}
+#main-col #SortArticles .inner:nth-child(odd),#main-col #SortArticles .inner:nth-child(even){ margin:20px 0;}
+#main-col #SortArticles .inner:nth-child(odd){ margin-right: 2%;}
+#main-col #SortArticles .inner:nth-child(even){ margin-left: 0.5%; }
+
+@media only screen and (max-width: 1200px){
+#SortArticles .inner{ width: 100%; float:none;}
+#main-col #SortArticles .inner:nth-child(odd),#main-col #SortArticles .inner:nth-child(even){ margin:30px 0;}
+#main-col #SortArticles .inner:first-child{margin:20px 0}
+}
+@media only screen and (max-width: 992px){
+#SortArticles .inner{ width: 49%; float:left;}
+#main-col #SortArticles .inner { margin-right: 0;}
+#main-col #SortArticles .inner:nth-child(odd){ margin-right: 2%;}
+#main-col #SortArticles .inner:nth-child(even){ margin-left: 0%; }
+#main-col #SortArticles .inner:nth-child(odd),#main-col #SortArticles .inner:nth-child(even){ margin-top:20px;}
+}
+@media only screen and (max-width: 768px){	
+#SortArticles .inner{ width: 100%; float:none;}
+#main-col #SortArticles .inner:nth-child(odd),#main-col #SortArticles .inner:nth-child(even){ margin:30px 0;}
+#main-col #SortArticles .inner:first-child{margin:20px 0}
+#main-col #SortArticles .inner:last-child{ margin: 0;}
+}
+/*標題設定*/
+#SortArticles .arrow-title h2 {font-size: 22px; letter-spacing: 1px;}
+#SortArticles .arrow-title i{font-size: 15px;}
+/*標題顏色*/
+.fate .arrow-title{ background-color:#78be4e;}
+.fate .arrow-title:before{content:"\f186";}
+.fate .arrow-title:after {border-top-color: #78be4e;}
+.love .arrow-title{ background-color:#eb6f70;}
+.love .arrow-title:before{content:"\f21e";}
+.love .arrow-title:after {border-top-color: #eb6f70;}
+.puzzle .arrow-title{ background-color:#955694;}
+.puzzle .arrow-title:before{content:"\f0d0";}
+.puzzle .arrow-title:after {border-top-color: #955694;}
+.personality .arrow-title{ background-color:#eb9e79;}
+.personality .arrow-title:before{content:"\f118";}
+.personality .arrow-title:after {border-top-color: #eb9e79;}
+.poll .arrow-title{ background-color:#ff8400;}
+.poll .arrow-title:before{content:"\f200";}
+.poll .arrow-title:after {border-top-color: #ff8400;}
+.issue .arrow-title{ background-color:#309ac1;}
+.issue .arrow-title:before{content:"\f0e6";}
+.issue .arrow-title:after {border-top-color: #309ac1;}
+.keyword .arrow-title{ background-color:#f18282;}
+.keyword .arrow-title:before{content:"\f002";}
+.keyword .arrow-title:after {border-top-color: #f18282;}
+.work .arrow-title{ background-color:#40a880;}
+.work .arrow-title:before{content:"\f0b1";}
+.work .arrow-title:after {border-top-color: #40a880;}
+.friendship .arrow-title{ background-color:#ECBF0A;}
+.friendship .arrow-title:before{content:"\f21d";}
+.friendship .arrow-title:after {border-top-color: #ECBF0A;}
+/*------------列表設定------------------*/
+/*------------ul.article-lists .item common-------------*/
+ul.article-lists{ margin: 0; padding: 0; list-style: none; position: relative; top: -12px;}
+ul.article-lists li .item{ margin: 3% 2%; background-color:#fff; border-bottom: 1px dotted #bfbfbf;}
+ul.article-lists .item .clearfix { padding: 0px 5px 10px 5px;}
+ul.article-lists .item .title {margin-bottom:5px; height: 52px; font-size:16px; font-weight: normal; font-family:Arial, Helvetica, sans-serif;}
+ul.article-lists .item .title a{color:#615a43;}
+ul.article-lists .item .photo{ width: 140px; margin-top: 3px; float: left;  overflow: hidden; clear: both;  margin-right: 5px; margin-bottom: 20px;}
+ul.article-lists .item .tags li{ font-size: 12px;}
+/*take out標籤顏色*/
+ul.article-lists .tags li a,
+ul.article-lists .item .tags li a,
+ul.article-lists .item ul.posted li.date,
+ul.article-lists .item ul.posted li.author{color:#888}
+ul.article-lists .tags li.all a, ul.article-lists .tags li.fate a, ul.article-lists .tags li.love a, ul.article-lists .tags li.work a,
+ul.article-lists .tags li.personality a, ul.article-lists .tags li.puzzle a, ul.article-lists .tags li.issue a, ul.article-lists .tags li.poll a,  ul.article-lists .tags li.friendship a, 
+ul.article-lists .tags li.Capricorn a, ul.article-lists .tags li.Aries a, ul.article-lists .tags li.Taurus a, ul.article-lists .tags li.Gemini a, ul.article-lists .tags li.Cancer a, ul.article-lists .tags li.Leo a, ul.article-lists .tags li.Virgo a, ul.article-lists .tags li.Libra a, ul.article-lists .tags li.Scorpio a, ul.article-lists .tags li.Sagittarius a, ul.article-lists .tags li.Aquarius a, ul.article-lists .tags li.Pisces a{ color:#888 !important; background:#fff; border-color:#fff;}
+
+ul.article-lists .item ul.posted { margin-top: 5px;}
+@media only screen and (max-width: 991px){
+ul.article-lists .item .title { height: auto; max-height: 52px;}	
+}
+
+@media only screen and (max-width: 600px){
+ul.article-lists .item .title{font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif;}
+ul.article-lists .item .photo{ width: 120px;}
+ul.article-lists .item .title { height: auto; font-size:17px;}
+ul.article-lists .item .title a{color:#252525;}
+ul.article-lists .item .tags li, ul.article-lists .item ul.posted li.date, ul.article-lists .item ul.posted li.author{ font-size: 11px;}
+ul.article-lists .tags li a, ul.article-lists .item .tags li a{ line-height: 15px;}
+ul.article-lists .item ul.posted { margin-top: 0;}
+/*列表頁，標籤只顯示前面3個，其餘隱藏*/
+ul.article-lists .item .tags li{ display:none;/*解決Chrome中最小字級12px的問題*/ -webkit-text-size-adjust: none; font-size: 11px;}
+ul.article-lists .item .tags li:nth-child(1), ul.article-lists .item .tags li:nth-child(2){ display: inline-block;}
+
+}
+@media only screen and (max-width: 321px){	
+ul.article-lists .item .photo{ width: 110px;}
+}
+/*------------ul.article-lists .item common end-------------*/
+/*------------列表設定結束------------------*/
+
+
+
+/*lightbox分享按鈕
+-------------------------------------*/
+/*設定*/
+.lightbox header{padding: 10px 10px 0;}
+.lightbox h4, .lightbox h5{font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "新細明體", Helvetica, sans-serif;}
+.lightbox h4{color: #000;  text-align: left;  font-size: 20px; padding: 0 0 10px; margin: 0 0 15px 0; border-bottom: 1px solid #ccc;}
+.lightbox h5 { font-size: 17px; padding: 0px 20px 0px; line-height: 150%; letter-spacing: 0.5px;  text-align: center;}
+.lightbox .content{ padding: 0 4% 10px; text-align: center;}
+/*light box 垂直置中*/
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    max-width: 450px;
+	min-width: 450px;
+	margin: 0 auto;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+@media only screen and (max-width: 480px){
+	.vertical-alignment-helper {max-width: 320px; min-width: 320px;}
+}
+/*禁止 .modal-open時,body增加padding-right*/
+.modal-open, .modal{
+padding-right: 0 !important;
+}
+/*按鈕*/
+.share-lg-btn { font-size: 22px !important; line-height: 50px;
+ background-color: #ffa133; text-align: left; cursor: pointer; margin: 20px auto 20px; color:#fff;}
+.share-lg-btn:before { font-size: 28px; content: "\f078"; text-indent: 25px; padding-right: 15px;}
+.share-lg-btn.fb, .share-lg-btn.fb:hover {background: #3c5a98;}
+ .share-lg-btn.fb:before{content: "\f230";}    
+.share-lg-btn.line, .share-lg-btn.line:hover{background: #00c400;}
+.share-lg-btn.line:before{content: "\f075";}
+.share-lg-btn:after{ content:attr(btn-text); display: inline; vertical-align:middle; text-indent: -40%;
+ font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif;}
+
+@media only screen and (max-width: 400px){
+.share-lg-btn, .share-lg-btn:hover { min-width: 100%; max-width: 100%;}	
+}
+
+/*粉絲團*/
+.lightbox .facebook-fans-box{ width: 150px; margin: 10px auto 25px;  text-align: center;}
+.lightbox .fb-liked{ background:#ccc; width: 100%; padding: 10px; border-radius: 5px; margin-bottom: 5px; text-align: center;} 
+.lightbox .fb-liked p{font-size: 15px;}
+.lightbox .fb-liked p:before{ font: normal normal normal 14px/1 FontAwesome; content:"\f046"; margin-right: 5px; font-size: 18px; }
+.lightbox .fb-liked:hover{ background:#e4e4e4;}
+
+/* Page 頁碼
+------------------------------------------------*/
+/* more pagination */
+.pagination {width:100%;background-color:none;display: block;}
+
+.category .pagination {	margin: 0;}
+.pagination h3{display:block; *text-align:right; font-family: "微軟正黑體", "Arial Unicode MS"; font-size: 15px; letter-spacing: 1px; color: #fff; margin-bottom: 0;
+padding: 10px 10px 20px 0px; text-transform: uppercase;}
+.pagination .nav-previous, .pagination .nav-next {display:inline-block;width:11px;height:12px;margin:0 5px;text-indent:-99999px;}
+.pagination a {display:block;}
+/*content nol pager*/
+.pagenavi {clear: both; padding-top: 20px; padding-bottom: 20px !important; text-align: center; font-size: 108%; font-weight: 700;
+font-family: 'Lato', sans-serif; -webkit-font-smoothing: antialiased; zoom: 1;}
+.pagenavi:before {display: block; content: "";}
+.pagenavi:after {display: block; clear: both; visibility: hidden; height: 0.1px; font-size: 0.1em; line-height: 0; content: "";}
+.pagenavi span { width: 34px; height: 34px; vertical-align: top; line-height: 34px; font-weight: 700; display: inline-block;}
+.pagenavi a { display: inline-block; width: 34px; height: 34px; line-height: 34px; color: #fff; background-color: #A0A0A0; margin: 0 5px;
+overflow: hidden; -webkit-transition: 0.3s ease; -moz-transition: 0.3s ease; -o-transition: 0.3s ease; transition: 0.3s ease;}
+.pagenavi a:hover { background: #fff; color: #000;text-decoration: none;}
+
+.pagenavi .current{ background:#fff;}
+.pagenavi .next-link:before{ content:">>";}
+.pagenavi .previous-link:before{ content:"<<";}
+.pagenavi .disabled:before{ content:"...";}
+@media only screen and (max-width: 600px){
+	.pagination{ margin-bottom: 0;}
+	.pagenavi a {margin: 0;}
+	}
+
+/* Page 頁碼結束---------------------------------------*/
+
+/*2017-5-2 星座line按鈕*/
+ .line-btn{ background-image:url(../images/common/ui.svg); background-position:5px -200px; background-color: #00C300; margin:10px 0; padding: 15px 10px 20px 45px; display: block;  font-family: "Microsoft JhengHei",微軟正黑體,arial,sans-serif; font-weight: 700; color: #fff; font-size: 16px; border-radius: 8px;}
+.line-btn:hover, .line-btn:focus{ text-decoration: none; color:#fff;}
+@media only screen and (max-width: 600px){
+.line-btn{ font-size: 18px; font-weight: normal;}
+}

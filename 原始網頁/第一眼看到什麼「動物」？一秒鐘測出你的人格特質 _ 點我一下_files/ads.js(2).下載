@@ -1,0 +1,129 @@
+
+					var isLazyLoadActive = false;
+					var winBider = null;
+
+					if(typeof(crtCheck) == "undefined"){
+						var crtCheck = false;
+					}
+
+					var fljson = {"cpm":0.234375,"bider":"clickforce","tag":"var ct = function(){};var cu = \"\/\/ad.doublemax.net\/adserver\/c?p=3920:14205:40272:2d8e70345328eaa18187dc3c1b9d6aec:3482&dest=http%3A%2F%2Fwww.nomurafunds.com.tw%2Factivity%2FMarketing%2F2018_USHY%2Findex.html%3Futm_source%3DClickforce%26utm_medium%3Dbanner%26utm_campaign%3D201810USHY%26utm_content%3D1600%2A900\",iu = \"\/\/ad.doublemax.net\/adserver\/i?p=3920:14205:40272:2d8e70345328eaa18187dc3c1b9d6aec:3482\", zi = \"3920\", w = 300, h = 250, ctv = \"\/\/cdn.doublemax.net\/z\/3482\/606a11c523401bcc963dc89c30a29e31\/index.html\";\n(function() { var j = document.createElement('script'); j.src = \"\/\/cdn.doublemax.net\/js\/tmp2\/3.js\"; document.body.appendChild(j); })();\r\n\t\t\t\tvar lasu = 'https:\/\/pixel.adsafeprotected.com\/jload?anId=927459&advId=0&campId=3482&pubId=1081&chanId=0&placementId=3920';\r\n\t\t        var last = document.createElement('script');\r\n\t\t        last.type = 'text\/javascript';\r\n\t\t        last.src = lasu;\r\n\t\t        last.async = true;\r\n\t\t        if (document.getElementsByTagName('body').length > 0) {\r\n\t\t            document.getElementsByTagName('body')[0].appendChild(last);\r\n\t\t        } else if (document.getElementsByTagName('head').length > 0) {       \r\n\t\t            document.getElementsByTagName('head')[0].appendChild(last);\r\n\t\t        } \t\t\t\t\r\n\t\t\t\tself.frameElement.width=300;self.frameElement.height=250;\r\n\t\t\t\tsetTimeout(function(){ \r\n\t\t\t\t\tparent.dmpSr_view_log('clickforce','3920:14205:40272:2d8e70345328eaa18187dc3c1b9d6aec:3482','332668-5d4oun0uFJGNakof0qtVW6Mz1H4e0cq6');\r\n\t\t\t\t\t\r\n\t\t\t\t}, 400);\r\n\t\t\tvar a = document.createElement('a');\r\n\t\t\ta.href = 'http:\/\/www.clickforce.com.tw';\r\n\t\t\ta.setAttribute('target', '_blank');\r\n\t\t\tdocument.body.appendChild(a);\r\n\t\t\tvar k = document.createElement('img');\r\n\t\t\tk.src = '\/\/cdn.doublemax.net\/cf.png';\r\n\t\t\tk.setAttribute('class', 'cflogo');\r\n\t\t\tk.setAttribute('style', 'position:absolute; bottom:0; right:0; z-index:9999999;');\r\n\t\t\tk.setAttribute('width', 23);\r\n\t\t\tk.setAttribute('height', 20);\r\n\t\t\ta.appendChild(k);\r\n\t\tsetTimeout(function(){ \r\n\t\t\tvar az = document.getElementsByTagName('a');\r\n\t\t\tif(az.length > 0){\r\n\t\t\t\tfor (var i = 0; i < az.length; i++) {\r\n\t\t\t\t\tif(az[i].href.indexOf('ad.doublemax')!=-1)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\taz[i].addEventListener('click', function(){\r\n\t\t\t\t\t\t\tparent.dmpSr_click_log('clickforce','3920:14205:40272:2d8e70345328eaa18187dc3c1b9d6aec:3482','332668-5d4oun0uFJGNakof0qtVW6Mz1H4e0cq6');\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t});\r\n\t\t\t\t\t}\t\t\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}, 1000);\t\t\r\n\t\t\r\n\t\t\tvar p = \"3920:14205:40272:2d8e70345328eaa18187dc3c1b9d6aec:3482\";\r\n\t\t\tvar setUpAvTrack = true;\r\n\t\t"};
+					var flWithTp = false;
+					var zoneLazyLoad = 1;
+					if(typeof(fbList) != "undefined"){
+						flWithTp = true;
+						fbList[fbList.length] = fljson;
+						setTimeout(function(){
+							crtCheck = true;
+						    var winCpm = 0;
+						    var thirdPartyCheckCpm = 0.216;
+						   	var thirdPartyConfig = {"criteo":{"price_compare":"0"},"xaxis":{"price_compare":"0"},"innity":{"price_compare":"0"},"rtbHouse":{"price_compare":"0"}};
+						    for (var i = 0; i < fbList.length; i++) {
+						    	if(typeof(fbList[i]) != "undefined" && typeof(fbList[i].cpm)  != "undefined"){
+						    		if(fbList[i].cpm >= winCpm){
+						    			if(fbList[i].bider == "clickforce"){
+							    			winCpm = fbList[i].cpm;
+							    			winBider = fbList[i];
+						    			}else{
+						    				if(typeof(thirdPartyConfig[fbList[i].bider]) != "undefined"){
+						    					var tpCheckCpm = thirdPartyCheckCpm;
+
+						    					if(fbList[i].bider == "criteo"){
+						    						if(typeof(thirdPartyConfig["criteo"]["price_compare"]) != "undefined"){
+						    							if(thirdPartyConfig["criteo"]["price_compare"] == 0){
+						    								tpCheckCpm = 0;
+						    							}
+						    						}
+						    					}
+
+						    					if(fbList[i].bider == "xaxis"){
+													if(typeof(thirdPartyConfig["xaxis"]["price_compare"]) != "undefined"){
+														if(thirdPartyConfig["xaxis"]["price_compare"] == 0){
+															tpCheckCpm = 0;
+														}
+													}
+						    					}
+
+							    				if(fbList[i].cpm > tpCheckCpm){
+									    			winCpm = fbList[i].cpm;
+									    			winBider = fbList[i];
+							    				}	
+
+						    				}
+						    			}
+						    		}
+						    	}
+						    }
+				    		flWithTp = true;
+				    		setTimeout(function(){
+				    			if(typeof(avJsVer) == "undefined"){
+				    				crtCheck = true;
+				    				cfLazyload();
+				    			}
+				    		}, 2500);
+						}, 800);
+					}else{
+						winBider = fljson;
+			    		setTimeout(function(){		    			
+		    				crtCheck = true;
+		    				cfLazyload();
+			    		}, 350);							
+					}
+
+					function cfLazyload(){
+						if(crtCheck == true){				
+							if(isLazyLoadActive == false && winBider != null){
+								isLazyLoadActive = true;
+
+								if(winBider.bider == "clickforce"){
+									var script = document.createElement("script");
+									script.type = "text/javascript";
+									script.innerHTML = winBider.tag;
+									document.getElementsByTagName("head")[0].appendChild(script);
+								}else{
+									var k = document.createElement("iframe");
+									k.src = "about:blank";
+									k.setAttribute("class", "cftpif");
+									k.setAttribute("id", "cftpif");
+									k.setAttribute("width", 300);
+									k.setAttribute("height", 250);
+									k.setAttribute("scrolling", "no");
+									k.setAttribute("marginheight", "0");
+									k.setAttribute("marginwidth", "0");
+									k.setAttribute("allowtransparency", "true");
+									k.setAttribute("vspace", 0);
+									k.setAttribute("hspace", 0);
+									k.setAttribute("frameborder", 0);
+									document.body.appendChild(k);
+				                    k.contentDocument.write(winBider.tag);
+				                    k.contentDocument.close();															
+								}
+		
+
+							    if(typeof(avJsVer) != "undefined" && avJsVer == 1228){
+								    setTimeout(function(){
+								    	initActiveView();	
+								    }, 200);
+								}
+
+								if(flWithTp == true){
+									setTimeout(function(){
+										if(typeof(winBider.impTag)  != "undefined"){
+											parent.c_tag_mk("img", winBider.impTag + "&p=2d8e70345328eaa18187dc3c1b9d6aec-3920&t=1542697196",false);
+										}
+									}, 500);
+								}
+							}
+						}else{
+							setTimeout(function(){
+								cfLazyload();
+							}, 300);							
+						}	
+					}
+
+
+				    self.frameElement.width = 300;
+					self.frameElement.height = 250;
+					var sc = document.createElement("script");
+					sc.src = "//cdn.doublemax.net/js/av.js";
+					document.body.appendChild(sc);
+				

@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import url("menu.css");
+@import url("index.css");
+@import url("aside.css");
+@import url("article.css");
+@import url("member.css");
+@import url("disscus.css");
+/* 簡單流變媒體
+   注意: 流變媒體要求您必須移除 HTML 中媒體的高度和寬度屬性
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 不支援最大寬度，因此寬度預設為 100% */
+.ie6 img {
+	width:100%;
+}
+
+body{ background:#f0f0f0;}
+/*文字靠左靠右*/
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+/*外框邊邊*/
+.border-inner{ border-radius: 3px; overflow: hidden; position:relative; background: #fff; border: 1px solid #d3d6db; margin-bottom: 15px;}
+/*表格紅字*/
+p.fail{ font-size: 12px; margin:5px 0; color: #D54747;}
+/*框線*/
+.border-none{ border: none !important;}
+.border-radius-none{border-radius: 0 !important;}
+/*廣告*/
+div.ad_728{width:auto;} div.ad_970{width:auto;} div.ad_300 {width: auto;} div.ad_320{width: auto;} 
+/*廣告內頁*/
+.banner_wrapper_bottom {margin-bottom: 20px; text-align:center;}
+.banner_wrapper_top {margin-top: 20px; text-align:center;}
+/*置中*/
+.center-block {display: block;margin-left: auto;margin-right: auto;}
+/*無陰影*/
+.noshadow{-webkit-box-shadow:none !important;-moz-box-shadow:none !important;box-shadow:none !important;}
+.nobg{background: none !important;}
+.noborder{ border: none !important;}
+/*ul ol li設定*/
+.linelist {list-style: none; margin: 0; padding: 0;}
+.linelist li {margin: 0;padding: 0; word-spacing: normal; letter-spacing: normal;display: inline-block;}
+/*Form Style*/
+.form-control {font-size: 13px;}
+/*Form Style For Apple*/
+select.form-control, input.form-control {line-height: 27px;}
+/*bootstrap fixed
+----------------------------------------------*/
+.shadow, #main-col .inner, .wrapper-col .inner ,#second-col .inner{border: 1px solid #dfddda;background: #fff;}
+@media only screen and (max-width: 480px) {#main-col .inner{ border-right:none; border-left:none;}}
+@media (min-width: 768px){.container {width: 98%;}}
+@media (min-width: 992px){.container {width: 98%;}}
+@media (min-width:1200px){.container{width:1190px}}
+@media (min-width:1500px){.container{width:1200px}}
+
+@media only screen and (max-width: 680px) {.container{ padding-right: 5px; padding-left: 5px;}}
+@media only screen and (max-width: 480px) {.container{ padding-right: 0px; padding-left: 0px;}}
+@media (min-width: 992px){
+#aside.col-md-4 {width: 35.8%;}
+#main-col.col-md-8 {width: 63.2%;}
+}
+@media (min-width: 1200px){
+#main-col.col-lg-9{width: 70.9%;}
+#aside.col-lg-3 {width: 29.1%;}
+.visible-lg .banner_wrapper_bottom.col-lg-8 {width: 65%;}
+.visible-lg .banner_wrapper_bottom.col-lg-4 {width: 35%;}
+}
+/*article*/
+#main-col.col-xs-1, #main-col.col-sm-1, #main-col.col-md-1, #main-col.col-lg-1, #main-col.col-xs-2, #main-col.col-sm-2, #main-col.col-md-2, #main-col.col-lg-2, #main-col.col-xs-3, #main-col.col-sm-3, #main-col.col-md-3, #main-col.col-lg-3, #main-col.col-xs-4, #main-col.col-sm-4, #main-col.col-md-4, #main-col.col-lg-4, #main-col.col-xs-5, #main-col.col-sm-5, #main-col.col-md-5, #main-col.col-lg-5, #main-col.col-xs-6, #main-col.col-sm-6, #main-col.col-md-6, #main-col.col-lg-6, #main-col.col-xs-7, #main-col.col-sm-7, #main-col.col-md-7, #main-col.col-lg-7, #main-col.col-xs-8, #main-col.col-sm-8, #main-col.col-md-8, #main-col.col-lg-8, #main-col.col-xs-9, #main-col.col-sm-9, #main-col.col-md-9, #main-col.col-lg-9, #main-col.col-xs-10, #main-col.col-sm-10, #main-col.col-md-10, #main-col.col-lg-10, #main-col.col-xs-11, #main-col.col-sm-11, #main-col.col-md-11, #main-col.col-lg-11, #main-col.col-xs-12, #main-col.col-sm-12, #main-col.col-md-12, #main-col.col-lg-12, #second-col.col-xs-1, #second-col.col-sm-1, #second-col.col-md-1, #second-col.col-lg-1, #second-col.col-xs-2, #second-col.col-sm-2, #second-col.col-md-2, #second-col.col-lg-2, #second-col.col-xs-3, #second-col.col-sm-3, #second-col.col-md-3, #second-col.col-lg-3, #second-col.col-xs-4, #second-col.col-sm-4, #second-col.col-md-4, #second-col.col-lg-4, #second-col.col-xs-5, #second-col.col-sm-5, #second-col.col-md-5, #second-col.col-lg-5, #second-col.col-xs-6, #second-col.col-sm-6, #second-col.col-md-6, #second-col.col-lg-6, #second-col.col-xs-7, #second-col.col-sm-7, #second-col.col-md-7, #second-col.col-lg-7, #second-col.col-xs-8, #second-col.col-sm-8, #second-col.col-md-8, #second-col.col-lg-8, #second-col.col-xs-9, #second-col.col-sm-9, #second-col.col-md-9, #second-col.col-lg-9, #second-col.col-xs-10, #second-col.col-sm-10, #second-col.col-md-10, #second-col.col-lg-10, #second-col.col-xs-11, #second-col.col-sm-11, #second-col.col-md-11, #second-col.col-lg-11, #second-col.col-xs-12, #second-col.col-sm-12, #second-col.col-md-12, #second-col.col-lg-12 {
+position: relative;min-height: 1px;padding-right: 0px;padding-left: 0px;}
+
+/*member*/
+.wrapper-col.col-xs-1, .wrapper-col.col-sm-1, .wrapper-col.col-md-1, .wrapper-col.col-lg-1, .wrapper-col.col-xs-2, .wrapper-col.col-sm-2, .wrapper-col.col-md-2, .wrapper-col.col-lg-2, .wrapper-col.col-xs-3, .wrapper-col.col-sm-3, .wrapper-col.col-md-3, .wrapper-col.col-lg-3, .wrapper-col.col-xs-4, .wrapper-col.col-sm-4, .wrapper-col.col-md-4, .wrapper-col.col-lg-4, .wrapper-col.col-xs-5, .wrapper-col.col-sm-5, .wrapper-col.col-md-5, .wrapper-col.col-lg-5, .wrapper-col.col-xs-6, .wrapper-col.col-sm-6, .wrapper-col.col-md-6, .wrapper-col.col-lg-6, .wrapper-col.col-xs-7, .wrapper-col.col-sm-7, .wrapper-col.col-md-7, .wrapper-col.col-lg-7, .wrapper-col.col-xs-8, .wrapper-col.col-sm-8, .wrapper-col.col-md-8, .wrapper-col.col-lg-8, .wrapper-col.col-xs-9, .wrapper-col.col-sm-9, .wrapper-col.col-md-9, .wrapper-col.col-lg-9, .wrapper-col.col-xs-10, .wrapper-col.col-sm-10, .wrapper-col.col-md-10, .wrapper-col.col-lg-10, .wrapper-col.col-xs-11, .wrapper-col.col-sm-11, .wrapper-col.col-md-11, .wrapper-col.col-lg-11, .wrapper-col.col-xs-12, .wrapper-col.col-sm-12, .wrapper-col.col-md-12, .wrapper-col.col-lg-12{
+position: relative;min-height: 1px;padding-right: 0px;padding-left: 0px;}
+
+/*main-col, second-col color*/
+#main-col, #second-col{ margin-bottom: 25px;}
+@media only screen and (max-width: 992px){
+#main-col, #second-col{ margin-bottom: 15px;}
+}
+#main-col .inner, #second-col .inner{ background:#fff;}
+#main-col .inner {margin-right: 15px;}
+@media only screen and (max-width: 991px){#main-col .inner {margin-right: 0px;}} 
+/*Start 內頁 setting*/
+secion#main-col{  display:block;}
+secion#second-col{display:block;}
+
+
+/*footer*/
+footer{ background:#E0DEDF; }
+footer section{padding: 20px 0; text-align: center; text-transform: capitalize; font-family: "Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",sans-serif; color:#5d5e5e;}
